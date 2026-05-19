@@ -19,8 +19,6 @@ dependencies = [
     "feedparser>=6.0",
     "beautifulsoup4>=4.12",
     "requests>=2.31",
-    "transformers>=4.40",
-    "torch>=2.2",
     "vaderSentiment>=3.3",
     "textblob>=0.18",
     "scikit-learn>=1.4",
@@ -33,6 +31,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+finbert = [
+    "transformers>=4.40",
+    "torch>=2.2",
+]
 dev = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
