@@ -22,8 +22,8 @@ dist/
 *.key
 
 # Project data — never commit market data, caches, logs, or DBs
-data/
-!data/.gitkeep
+/data/
+!/data/.gitkeep
 *.sqlite
 *.db
 *.parquet
