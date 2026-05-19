@@ -3,7 +3,7 @@ name = "trading-copilot"
 version = "0.1.0"
 description = "AI market-intelligence and probabilistic directional-prediction copilot (NSE/BSE/US)."
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.11"
 
 # Phase 1 ships only the dependencies needed for config + logging + tests.
 # Each subsequent phase will add its own deps deliberately, not all up-front.
