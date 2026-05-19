@@ -1,0 +1,37 @@
+# Trading Copilot — runtime configuration.
+# Secrets do NOT live here. They live in .env (gitignored).
+
+app:
+  name: trading-copilot
+  log_level: INFO            # DEBUG | INFO | WARNING | ERROR
+  timezone: Asia/Kolkata     # primary market tz; data stored internally in UTC
+
+paths:
+  # All paths are relative to the project root unless absolute.
+  data_dir: data
+  cache_dir: data/cache
+  log_dir: data/logs
+  db_path: data/db/copilot.sqlite
+
+markets:
+  primary: NSE               # NSE | BSE | US — phase 1 default
+  # Watchlist for early development. Expand later from index membership files.
+  watchlist:
+    NSE:
+      - RELIANCE.NS
+      - TCS.NS
+      - INFY.NS
+      - HDFCBANK.NS
+      - ICICIBANK.NS
+    US:
+      - AAPL
+      - MSFT
+      - NVDA
+
+data:
+  history_days: 730           # how far back to fetch on first run (~2 years)
+  default_interval: 1d        # 1d | 1h | 5m — yfinance interval strings
+
+model:
+  horizon_days: 5            # swing-trade target horizon
+  min_confidence: 0.55       # below this → HOLD

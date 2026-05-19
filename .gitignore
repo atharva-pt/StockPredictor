@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+build/
+dist/
+
+# uv
+.uv-cache/
+
+# Env / secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Project data — never commit market data, caches, logs, or DBs
+data/
+!data/.gitkeep
+*.sqlite
+*.db
+*.parquet
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
